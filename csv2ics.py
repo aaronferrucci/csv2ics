@@ -74,7 +74,7 @@ if __name__ == '__main__':
         sys.exit()
 
     cal = Calendar()
-    cal.add('prodid', '-//shaleh c2v 2 ical//csv2ics//')
+    cal.add('prodid', '-//aaronferrucci//csv2ics//')
     cal.add('version', '2.0')
 
     with open(sys.argv[1]) as fp:
