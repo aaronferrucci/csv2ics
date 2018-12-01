@@ -10,5 +10,4 @@ foo3,foo3 bar,Nov 07 02:35 2018,Nov 07 02:36PM 2018
 foo3,foo3 bar,Nov 07 02:35PM 2018,Nov 07 02:36PM 2018
 foo4,foo4 bar,Nov 8 2018,Nov 8 2018
 foo5,foo5 bar,12/1/2018 11:15AM,12/1/2018 12:15PM
-The tool expects 4 fields in the csv:
 ```
