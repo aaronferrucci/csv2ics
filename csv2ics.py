@@ -77,7 +77,7 @@ if __name__ == '__main__':
     cal.add('version', '2.0')
 
     with open(sys.argv[1]) as fp:
-        reader = DictReader(fp)
+        reader = DictReader(fp, delimiter='\t')
         for item in reader:
             start = mk_time(item['start'])
             end = mk_time(item['end'])
@@ -85,6 +85,7 @@ if __name__ == '__main__':
             event = Event()
             event.add('summary', item['summary'])
             event.add('description', item['description'])
+            event.add('location', item['location'])
             event.add('dtstart', start)
             event.add('dtend', end)
 

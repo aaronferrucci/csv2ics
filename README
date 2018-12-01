@@ -3,11 +3,6 @@ Convert csv into ics
 Sample input:
 
 ```
-summary,description,start,end
-foo,foo bar,Wed Nov 7 14:35 2018,Wed Nov 7 14:36 2018
-foo2,foo2 bar,Thu Nov 8 2018,Thu Nov 8 2018
-foo3,foo3 bar,Nov 07 02:35 2018,Nov 07 02:36PM 2018
-foo3,foo3 bar,Nov 07 02:35PM 2018,Nov 07 02:36PM 2018
-foo4,foo4 bar,Nov 8 2018,Nov 8 2018
-foo5,foo5 bar,12/1/2018 11:15AM,12/1/2018 12:15PM
+summary\tstart\tend\tlocation\tdescription
+short summary, commas allowed!\t12/2/2018 11:15AM\t12/2/2018 12:15PM\tin the park
 ```
