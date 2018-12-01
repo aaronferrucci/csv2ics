@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 from csv import DictReader
-from datetime import datetime, timedelta
+from datetime import datetime
 import sys
 
 from icalendar import Calendar, Event, vDate, vDatetime
@@ -58,13 +58,13 @@ def mk_time(value):
     for fmt in dateFormats:
         try:
             return vDate(datetime.strptime(value, fmt))
-        except ValueError as e:
+        except ValueError:
             continue
 
     for fmt in dateTimeFormats:
         try:
             return vDatetime(datetime.strptime(value, fmt))
-        except ValueError as e:
+        except ValueError:
             continue
 
     # nothing worked!
