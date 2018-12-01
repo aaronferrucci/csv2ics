@@ -24,7 +24,6 @@ class Tests(unittest.TestCase):
 
     def test_mk_time_exc(self):
         bad_date = "foo"
-        bad_date = "11/7/2018 2:35PM"
         with self.assertRaises(DateParseError):
             mk_time(bad_date)
 
