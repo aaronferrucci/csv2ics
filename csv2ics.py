@@ -8,11 +8,11 @@ from icalendar import Calendar, Event, vDate, vDatetime
 class DateParseError(Exception):
     def __init__(self, value):
         self.value = value
-    
+
     def __str__(self):
         return "Parse error: " + self.value
 
-        
+
 def mk_time(value):
     try:
         return vDate(datetime.strptime(value, "%a %b %d %Y"))
@@ -22,7 +22,7 @@ def mk_time(value):
         except ValueError:
             raise DateParseError(value)
 
- 
+
 if __name__ == '__main__':
     cal = Calendar()
     cal.add('prodid', '-//shaleh c2v 2 ical//shaleh//')
