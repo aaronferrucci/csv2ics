@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from csv import DictReader
 from datetime import datetime, timedelta
 import sys
