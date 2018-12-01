@@ -18,6 +18,7 @@ class Tests(unittest.TestCase):
             ("Nov 7 14:35 2018", "20181107T143500"),
             ("Nov 7 2:35PM 2018", "20181107T143500"),
             ("11/7/2018 2:35PM", "20181107T143500"),
+            ("12/7/18 03:15 PM", "20181207T151500"),
         ]
         for case in cases:
             self.assertEqual(case[1], mk_time(case[0]).to_ical())
@@ -51,6 +52,8 @@ def mk_time(value):
       "%b %d %I:%M%p %Y",
       # 11/7/2018 2:35PM
       "%m/%d/%Y %I:%M%p",
+      # 12/7/18 03:15 PM (as exported from libreoffice calc)
+      "%m/%d/%y %I:%M %p",
     ]
     for fmt in dateFormats:
         try:
